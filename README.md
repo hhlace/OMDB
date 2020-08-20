@@ -1,3 +1,13 @@
+# Proyecto Academico individual para Coding Bootcamp Plataforma 5 
+
+# Actualmente en contruccion.
+
+Trabajo realizado en la mitad del curso, justo despues de terminar la junior face donde se aprendieron las distintas herramientas.
+Hoy finalizado el curso siendo reparada con las herramientas afianzadas.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # OMDB
 
 ## OMDB API
