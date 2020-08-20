@@ -29,9 +29,9 @@ class LoginContainer extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        //console.log('state-->', this.state)
+        console.log('state-->', this.state)
         this.props.loginUser(this.state)
-        this.props.history.push('/logueado')
+        this.props.history.push('/')
     }
 
     render() {

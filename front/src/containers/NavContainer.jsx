@@ -19,10 +19,10 @@ class NavContainer extends Component {
     handleChange(e) {
         const value = e.target.value;
         this.setState({ value });
+        console.log(this.state.value)
     }
 
     handleSubmit(e) {
-        e.preventDefault();
         this.props.fetchMovies(this.state.value)
         .then(() => this.props.history.push('/movies'))
     }

@@ -6,7 +6,7 @@ import Welcome from "../components/Welcome";
 import { connect } from 'react-redux';
 import MovieContainer from "../containers/MovieContainer";
 import RegisterContainer from "../containers/RegisterContainer";
-import Logueado from "./Logueado";
+import Logued from "../containers/LoguedContainer";
 import LoginContainer from "../containers/LoginContainer";
 
 
@@ -16,7 +16,7 @@ class main extends Component {
   }
   render() {
     return (
-      <div id="main" className="container-fluid">
+      <div id="main">
         <Route path="/" component={NavContainer} />
         <div className="col-xs-10">
           <Switch>
@@ -25,7 +25,7 @@ class main extends Component {
             <Route exact path="/movies/:id" component={MovieContainer} />
             <Route exact path="/register" component={RegisterContainer} />
             <Route exact path="/login" component={LoginContainer} />
-            <Route exact path="/logueado" component={Logueado} />
+            <Route exact path="/logueado" component={Logued} />
           </Switch>
         </div>
       </div>
