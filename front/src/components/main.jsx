@@ -8,6 +8,7 @@ import MovieContainer from "../containers/MovieContainer";
 import RegisterContainer from "../containers/RegisterContainer";
 import Logued from "../containers/LoguedContainer";
 import LoginContainer from "../containers/LoginContainer";
+import Footer from './Footer';
 
 
 class main extends Component {
@@ -28,6 +29,7 @@ class main extends Component {
             <Route exact path="/logueado" component={Logued} />
           </Switch>
         </div>
+        <Route path="/" component={Footer} />
       </div>
     );
   }

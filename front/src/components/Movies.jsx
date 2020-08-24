@@ -1,24 +1,27 @@
 import React from 'react';
-import{ Link } from 'react-router-dom';
+import MovieCard from './MovieCard';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 export default ({movies}) => (
-    <div className="container-fluid">
-      <h3>Movies</h3>
-      <div className="row">
-        {movies.length > 1 ? (movies.map(movie => (
-          <div key={movie.imdbID} className="col-xs-4">
-            <Link className="thumbnail" to={`/movies/${movie.imdbID}`}>
-              <img src={movie.Poster} />
-              <div className="caption">
-                <h5>
-                  <span>{movie.Title}</span>
-                </h5>
-                <small>Year {movie.Year}</small>
-              </div>
-            </Link>
-          </div>
-        ))) :(<div>loading</div>)
-        }
+
+
+      <div className='container'>
+        <h3>search for: </h3>
+        <br></br>
+        <div className='row'>
+
+          {movies.length > 1 ? (movies.map(movie => (
+            <div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2'>
+              <MovieCard movie={movie}/>
+            </div>
+            
+          ))) :(<div>loading</div>)
+          }
+        </div>
       </div>
-    </div>
+
+
   );
+
+

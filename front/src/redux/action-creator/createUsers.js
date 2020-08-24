@@ -17,7 +17,7 @@ const login = loggedUser => {
 
 
 export const userCreate = user => {
-    return axios.post('/register', user)
+    return axios.post('/api/register', user)
     .then( res => res.data )
     .then( user => {
         return dispatch( createUser(user) )
@@ -25,11 +25,11 @@ export const userCreate = user => {
 }
 
 export const loginUser =  user => dispatch => {
-        return axios.post('/login', user)
+        return axios.post('/api/login', user)
     .then( res => {dispatch(login(res.data))}) }
 
 export const logout = () => dispatch => {
-    return axios.post('/logout')
+    return axios.post('/api/logout')
     .then(dispatch(login({})))
 }
 

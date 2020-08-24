@@ -8,6 +8,7 @@ var cookieParser = require("cookie-parser");
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const routes = require("./routes")
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -33,21 +34,6 @@ passport.use(
   })
 );
 
-/* passport.use(new LocalStrategy(
-  function(username, password, done) {
-    User.findOne( {where: { username: username }}, function (err, user) {
-      if (err) { return done(err); }
-      if (!user) {
-        return done(null, false, { message: 'Incorrect username.' });
-      }
-      if (!user.validPassword(password)) {
-        return done(null, false, { message: 'Incorrect password.' });
-      }
-      return done(null, user);
-    });
-  }
-)); */
-
 
 passport.serializeUser(function (user, done) {
   done(null, user.id);
@@ -56,24 +42,11 @@ passport.deserializeUser(function (id, done) {
   User.findByPk(id).then((user) => done(null, user));
 });
 
-app.post("/register", (req, res) => {
-  User.create(req.body).then((user) => res.send(user));
-});
 
-app.post('/login', passport.authenticate('local'), (req, res, next) => {
-    res.json(req.user)
-} ) ;
-
-
-/* app.post("/login", passport.authenticate("local"), (req, res, next) => {
-    console.log(user)
-  res.status(200).json(req.user);
-}); */
-
-app.post("/logout", (req, res) => {
-  if (req.isAuthenticated) req.logOut();
-  res.redirect("/");
-});
+app.use('/', routes);
+app.get('/*', (req, res) => {
+  res.sendFile(__dirname + '/public/' + 'index.html')
+})
 
 db.sync()
   .then(() => {

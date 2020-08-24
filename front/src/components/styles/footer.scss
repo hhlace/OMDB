@@ -1,0 +1,31 @@
+#footer{
+    background-color: black;
+    height: 100px;
+    color: #B0B0B0;
+}
+
+h6{
+    font-size: smaller;
+}
+
+#primerfila{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    span {
+        margin-left: 5px;
+    }
+}
+
+.copyright {
+    margin:0 auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.row{
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+}

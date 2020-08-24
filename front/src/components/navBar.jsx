@@ -215,8 +215,8 @@ export default function PrimarySearchAppBar({ handleChange, value, handleSubmit,
           </div>
           ) : (
             <div className={classes.sectionDesktop}>
-              <Link to={'/register'}><Button>Register</Button></Link>
-              <Link to={'/login'}><Button>Login</Button></Link>
+              <Button component={Link} to='/register' color='wihte'>Register</Button>
+              <Button component={Link} to='/login'>Login</Button>
           </div>
           )}
           <div className={classes.sectionMobile}>
