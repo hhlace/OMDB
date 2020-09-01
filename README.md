@@ -1,11 +1,17 @@
-# Proyecto Academico individual para Coding Bootcamp Plataforma 5 
+# Individual Academic Project for Plataforma 5 Coding Bootcamp  
 
-# Actualmente en contruccion.
+# Under construction.
 
-Trabajo realizado en la mitad del curso, justo despues de terminar la junior face donde se aprendieron las distintas herramientas.
-Hoy finalizado el curso siendo reparada con las herramientas afianzadas.
+Individual project done using OMDB api, Node.js and React mainly. Started in the middle of the Bootcamp for a week sprint only and actualy being updated with Material.UI library for the style. 
 
+To deploy it localy using the CLI, go to the 'back' directory and run the the following command:
+$ npm start
 
+It should log 'listening on 3000' and after that you navigate it in the following URL:
+
+http://localhost:3000/
+
+Below are the instructions given for us to build it.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # OMDB
