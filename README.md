@@ -7,7 +7,7 @@ Individual project done using OMDB api, Node.js and React mainly. Started in the
 To deploy it localy using the CLI, go to the 'back' directory and run the the following command:
 $ npm start
 
-It should log 'listening on 3000' and after that you navigate it in the following URL:
+It should log 'listening on 3000' and after that you can navigate it in the following URL:
 
 http://localhost:3000/
 
