@@ -1,16 +1,16 @@
-import { CREATE_USER, LOGIN_USER } from '../action-creator/constants';
+import { LOGIN_USER, UNAVAILABLE_EMAIL } from '../action-creator/constants';
 
 const initialState = {
-    userData: {},
-    loggedUser: {}
+    loggedUser: {},
+    unavailableEmail: ''
 };
 
 export default (state = initialState, action) => {
     switch(action.type) {
-        case CREATE_USER:
-            return { ...state, userData: action.userData}
         case LOGIN_USER:
             return { ...state, loggedUser: action.loggedUser}
+        case UNAVAILABLE_EMAIL:
+            return { ...state, unavailableEmail: action.username}
         default:
             return state;
     }

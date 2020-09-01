@@ -5,15 +5,24 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
+import { Link } from "react-router-dom";
+import './styles/movieCard.scss'
+
+
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 200,
+    height: 425,
+    margin: 5
   },
   media: {
-    height: 300,
+    height: 230,
   },
 });
 
@@ -23,25 +32,30 @@ export default function MediaCard({movie}) {
   return (
     <Card className={classes.root}>
       <CardActionArea>
+        <Link to={`/movies/${movie.imdbID}`} > 
         <CardMedia
           className={classes.media}
           image={movie.Poster}
           title={movie.Title}
         />
+        </Link>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="p" component="p">
           {movie.Title}
           </Typography>
           <Typography variant="p" color="textSecondary" component="p">
-            Solo actores principales.
+            Type: {movie.Type}
+          </Typography>
+          <Typography variant="p" color="textSecondary" component="p">
+            Year: {movie.Year}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
+      <IconButton color="secondary" aria-label="add to favourites">
+        <FavoriteBorderIcon />
+      </IconButton>
+        <Button size="small"  color="primary" href={`/movies/${movie.imdbID}`}>
           Learn More
         </Button>
       </CardActions>

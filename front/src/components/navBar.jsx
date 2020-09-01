@@ -176,10 +176,11 @@ export default function PrimarySearchAppBar({ handleChange, value, handleSubmit,
     <div className={classes.grow}>
       <AppBar position="static" id="navBar">
         <Toolbar>
-
+          <Link to='/' style={{ textDecoration: 'none' }}>
           <Typography className={classes.title} variant="h6" noWrap>
             OMDB
           </Typography>
+          </Link>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -215,7 +216,7 @@ export default function PrimarySearchAppBar({ handleChange, value, handleSubmit,
           </div>
           ) : (
             <div className={classes.sectionDesktop}>
-              <Button component={Link} to='/register' color='wihte'>Register</Button>
+              <Button component={Link} to='/register'>Register</Button>
               <Button component={Link} to='/login'>Login</Button>
           </div>
           )}

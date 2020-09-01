@@ -103,7 +103,6 @@ export default function SignInSide() {
             <Button
               type="submit"
               fullWidth
-              color="white"
               className={classes.submit}
             >
               Sign In

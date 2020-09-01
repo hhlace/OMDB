@@ -38,6 +38,10 @@ module.exports = {
         ],
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+    },
+      {
         test: /jsx?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
