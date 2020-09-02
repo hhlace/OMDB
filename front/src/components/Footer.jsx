@@ -7,8 +7,12 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import IconButton from '@material-ui/core/IconButton';
+
+
 
 function Copyright() {
+
     return (
       <Typography variant="body2" align="center">
         {'Copyright © '}
@@ -26,10 +30,10 @@ export default () => (
         <div className="row">
             <div className="col-12">
                 <div id="primerfila" >
-                    <span><FacebookIcon /></span>
-                    <span><InstagramIcon /></span>
-                    <span><GitHubIcon /></span>
-                    <span><TwitterIcon /></span>
+                    <span><IconButton href={'https://www.facebook.com/hhlace/'}><FacebookIcon style={{color: 'antiquewhite'}}/></IconButton></span>
+                    <span><IconButton href={'https://www.instagram.com/hnry__h/'}><InstagramIcon style={{color: 'antiquewhite'}}/></IconButton></span>
+                    <span><IconButton href={'https://github.com/hhlace'}><GitHubIcon style={{color: 'antiquewhite'}}/></IconButton></span>
+                    <span><IconButton href ={'https://twitter.com/hhlace'}><TwitterIcon style={{color: 'antiquewhite'}}/></IconButton></span>
                 </div>
             </div>
         </div>

@@ -31,11 +31,11 @@ export const checkAvailabilty = username => dispatch => {
 }
 
 export const loginUser =  user => dispatch => {
-        return axios.post('/api/login', user)
+        return axios.post('/login', user)
     .then( res => {dispatch(login(res.data))}) }
 
 export const logout = () => dispatch => {
-    return axios.post('/api/logout')
+    return axios.post('/logout')
     .then(dispatch(login({})))
 }
 

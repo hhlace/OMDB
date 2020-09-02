@@ -43827,7 +43827,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#footer {\n  background-color: black;\n  height: 100px;\n  color: #B0B0B0;\n  position: fixed;\n  bottom: 0px; }\n\nh6 {\n  font-size: smaller; }\n\n#primerfila {\n  margin: 0 auto;\n  margin-top: 10px;\n  margin-bottom: 5px;\n  text-align: center; }\n  #primerfila span {\n    margin-left: 5px; }\n\n.copyright {\n  margin: 0 auto;\n  justify-content: center;\n  text-align: center; }\n\n.row {\n  margin-bottom: 8px;\n  display: flex;\n  flex-direction: row; }\n", "",{"version":3,"sources":["webpack://src/components/styles/footer.scss"],"names":[],"mappings":"AAAA;EACI,uBAAuB;EACvB,aAAa;EACb,cAAc;EACd,eAAc;EACd,WAAW,EAAA;;AAGf;EACI,kBAAkB,EAAA;;AAGtB;EACI,cAAc;EACd,gBAAgB;EAChB,kBAAkB;EAClB,kBAAkB,EAAA;EAJtB;IAMQ,gBAAgB,EAAA;;AAIxB;EACI,cAAa;EACb,uBAAuB;EACvB,kBAAkB,EAAA;;AAGtB;EACI,kBAAkB;EAClB,aAAa;EACb,mBAAmB,EAAA","sourcesContent":["#footer{\n    background-color: black;\n    height: 100px;\n    color: #B0B0B0;\n    position:fixed;\n    bottom: 0px;\n}\n\nh6{\n    font-size: smaller;\n}\n\n#primerfila{\n    margin: 0 auto;\n    margin-top: 10px;\n    margin-bottom: 5px;\n    text-align: center;\n    span {\n        margin-left: 5px;\n    }\n}\n\n.copyright {\n    margin:0 auto;\n    justify-content: center;\n    text-align: center;\n}\n\n.row{\n    margin-bottom: 8px;\n    display: flex;\n    flex-direction: row;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "#footer {\n  background-color: black;\n  height: 110px;\n  color: #B0B0B0;\n  position: fixed;\n  bottom: 0px; }\n\nh6 {\n  font-size: smaller; }\n\n#primerfila {\n  margin: 0 auto;\n  margin-top: 10px;\n  margin-bottom: 5px;\n  text-align: center; }\n  #primerfila span {\n    margin-left: 5px; }\n\n.copyright {\n  margin: 0 auto;\n  justify-content: center;\n  text-align: center; }\n\n.row {\n  margin-bottom: 8px;\n  display: flex;\n  flex-direction: row; }\n", "",{"version":3,"sources":["webpack://src/components/styles/footer.scss"],"names":[],"mappings":"AAAA;EACI,uBAAuB;EACvB,aAAa;EACb,cAAc;EACd,eAAc;EACd,WAAW,EAAA;;AAGf;EACI,kBAAkB,EAAA;;AAGtB;EACI,cAAc;EACd,gBAAgB;EAChB,kBAAkB;EAClB,kBAAkB,EAAA;EAJtB;IAMQ,gBAAgB,EAAA;;AAIxB;EACI,cAAa;EACb,uBAAuB;EACvB,kBAAkB,EAAA;;AAGtB;EACI,kBAAkB;EAClB,aAAa;EACb,mBAAmB,EAAA","sourcesContent":["#footer{\n    background-color: black;\n    height: 110px;\n    color: #B0B0B0;\n    position:fixed;\n    bottom: 0px;\n}\n\nh6{\n    font-size: smaller;\n}\n\n#primerfila{\n    margin: 0 auto;\n    margin-top: 10px;\n    margin-bottom: 5px;\n    text-align: center;\n    span {\n        margin-left: 5px;\n    }\n}\n\n.copyright {\n    margin:0 auto;\n    justify-content: center;\n    text-align: center;\n}\n\n.row{\n    margin-bottom: 8px;\n    display: flex;\n    flex-direction: row;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -89970,6 +89970,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
 /* harmony import */ var _material_ui_core_Link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Link */ "./node_modules/@material-ui/core/esm/Link/index.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
+
 
 
 
@@ -89999,7 +90001,31 @@ function Copyright() {
     className: "col-12"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "primerfila"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Facebook__WEBPACK_IMPORTED_MODULE_2___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Instagram__WEBPACK_IMPORTED_MODULE_3___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_GitHub__WEBPACK_IMPORTED_MODULE_4___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_5___default.a, null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    href: 'https://www.facebook.com/hhlace/'
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Facebook__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    style: {
+      color: 'antiquewhite'
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    href: 'https://www.instagram.com/hnry__h/'
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Instagram__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    style: {
+      color: 'antiquewhite'
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    href: 'https://github.com/hhlace'
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_GitHub__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    style: {
+      color: 'antiquewhite'
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    href: 'https://twitter.com/hhlace'
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    style: {
+      color: 'antiquewhite'
+    }
+  })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "copyright"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Copyright, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Plataforma 5 individual academic proyect")));
 });
@@ -90093,7 +90119,12 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__["m
     }
   };
 });
-function SignInSide() {
+function SignInSide(_ref) {
+  var handleChangeUsername = _ref.handleChangeUsername,
+      handleChangePassword = _ref.handleChangePassword,
+      username = _ref.username,
+      password = _ref.password,
+      handleSubmit = _ref.handleSubmit;
   var classes = useStyles();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_10__["default"], {
     container: true,
@@ -90122,7 +90153,8 @@ function SignInSide() {
     variant: "h5"
   }, "Sign in"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: classes.form,
-    noValidate: true
+    noValidate: true,
+    onSubmit: handleSubmit
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: "outlined",
     margin: "normal",
@@ -90132,7 +90164,9 @@ function SignInSide() {
     label: "Email Address",
     name: "email",
     autoComplete: "email",
-    autoFocus: true
+    autoFocus: true,
+    onChange: handleChangeUsername,
+    value: username
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: "outlined",
     margin: "normal",
@@ -90142,7 +90176,9 @@ function SignInSide() {
     label: "Password",
     type: "password",
     id: "password",
-    autoComplete: "current-password"
+    autoComplete: "current-password",
+    onChange: handleChangePassword,
+    value: password
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_5__["default"], {
     control: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_6__["default"], {
       value: "remember",
@@ -90641,7 +90677,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    controls: false
+    controls: false,
+    indicators: false
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"].Item, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "d-block w-100",
     src: "https://source.unsplash.com/paCF_o4FGwg/1660x900",
@@ -91990,14 +92027,14 @@ var checkAvailabilty = function checkAvailabilty(username) {
 };
 var loginUser = function loginUser(user) {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/login', user).then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/login', user).then(function (res) {
       dispatch(login(res.data));
     });
   };
 };
 var logout = function logout() {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/logout').then(dispatch(login({})));
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/logout').then(dispatch(login({})));
   };
 };
 
