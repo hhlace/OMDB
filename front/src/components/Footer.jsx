@@ -39,7 +39,7 @@ export default () => (
         </div>
         <div className='copyright'>
             <Copyright />
-            <h6>Plataforma 5 individual academic proyect</h6>
+            <h6>Plataforma 5 individual academic proyect.</h6>
         </div>
     </div>
 );
