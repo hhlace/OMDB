@@ -24,7 +24,6 @@ class RegisterContainer extends Component {
         this.handleChangePassword = this.handleChangePassword.bind(this);
         this.handleChangePassword2 = this.handleChangePassword2.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.checkUsername = this.checkUsername.bind(this);
     }
 
     handleChangeUsername(e) {
@@ -43,11 +42,6 @@ class RegisterContainer extends Component {
     handleChangePassword2(e) {
         const password2 = e.target.value;
         this.setState({ password2 });
-    }
-    
-    checkUsername() {
-        checkAvailabilty(this.state.username)
-        if(this.props.avilability) alert('User already exists')
     }
 
     handleSubmit(e) {

@@ -9,6 +9,7 @@ import RegisterContainer from "../containers/RegisterContainer";
 import Logued from "../containers/LoguedContainer";
 import LoginContainer from "../containers/LoginContainer";
 import Footer from './Footer';
+import './styles/main.scss';
 
 
 class main extends Component {

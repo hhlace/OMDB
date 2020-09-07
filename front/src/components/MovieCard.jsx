@@ -26,8 +26,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard({movie}) {
+export default function MediaCard({ movie, isFav, userId, addFav }) {
   const classes = useStyles();
+  const addToFav = () => {
+    addFav(movie.imdbID)
+  }
 
   return (
     <Card className={classes.root}>
@@ -53,7 +56,7 @@ export default function MediaCard({movie}) {
       </CardActionArea>
       <CardActions>
       <IconButton color="secondary" aria-label="add to favourites">
-        <FavoriteBorderIcon />
+        {isFav ? (<FavoriteIcon />) : (<FavoriteBorderIcon onClick={addToFav}/>)}
       </IconButton>
         <Button size="small"  color="primary" href={`/movies/${movie.imdbID}`}>
           Learn More

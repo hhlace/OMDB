@@ -19,7 +19,6 @@ class NavContainer extends Component {
     handleChange(e) {
         const value = e.target.value;
         this.setState({ value });
-        console.log(this.state.value)
     }
 
     handleSubmit(e) {
@@ -32,7 +31,6 @@ class NavContainer extends Component {
     }
 
     render() {
-        console.log('user---->', this.props.loggedUser)
         return(
             <div>
                 <NavBar

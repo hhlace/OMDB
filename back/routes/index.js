@@ -31,7 +31,22 @@ router.post("/register", (req, res) => {
 }) */
   
 router.post('/login', passport.authenticate('local'), (req, res, next) => {
-    res.json(req.user)
+    const user = new Object;
+    Favs.findAll({
+        where: {
+            userId: req.user.dataValues.id
+        }
+    })
+    .then(favourites => {
+        const favs = [];
+        for(let i = 0; i < favourites.length; i++){
+            favs[i] = favourites[i].favourite_movies
+        }
+        user.id = req.user.dataValues.id;
+        user.userName = req.user.dataValues.id;
+        user.favs = favs;
+        res.json(user)
+    })
 } ) ;
 
 router.post("/logout", (req, res) => {
@@ -45,8 +60,9 @@ router.post("/addFav", (req,res) => {
     })
     .then(fav => {
         fav.setUser(req.body.userId)
+        return fav;
     })
-    .then(() => res.status(201).send('added to favourites'))
+    .then(fav => res.status(201).send(fav))
 })
 
 router.get(":user/getFavs", (req, res) =>{

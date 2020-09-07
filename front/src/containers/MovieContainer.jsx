@@ -15,7 +15,6 @@ class MovieContainer extends Component {
     }
     
     render() {
-        console.log('movie--->', this.props.movie)
         return(
             <Movie movie={this.props.movie}/>
            //<div>movie</div>

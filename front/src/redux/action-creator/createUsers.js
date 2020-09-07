@@ -1,4 +1,4 @@
-import {  LOGIN_USER, UNAVAILABLE_EMAIL } from './constants';
+import {  LOGIN_USER, ADD_FAV } from './constants';
 import axios from 'axios';
 
 const login = loggedUser => {
@@ -8,10 +8,10 @@ const login = loggedUser => {
     }
 }
 
-const unavailableEmail = username => {
+const addFav = favId => {
     return {
-        type: UNAVAILABLE_EMAIL,
-        username
+        type: ADD_FAV,
+        favId
     }
 }
 
@@ -23,19 +23,19 @@ export const userCreate = user => dispatch => {
     })
 }
 
-export const checkAvailabilty = username => dispatch => {
-    return axios.post(`/register/check/${username}`)
-    .then(res => {
-        if (res.status == 409) dispatch(unavailableEmail(username))
-    })
-}
-
 export const loginUser =  user => dispatch => {
-        return axios.post('/login', user)
-    .then( res => {dispatch(login(res.data))}) }
+    return axios.post('/login', user)
+    .then( res => { dispatch(login(res.data)) })
+    .then( )
+}
 
 export const logout = () => dispatch => {
     return axios.post('/logout')
     .then(dispatch(login({})))
 }
 
+export const addToFav = (toFav) => dispatch => {
+    return axios.post('/addFav', toFav)
+    .then( res => res.data )
+    .then( fav => dispatch( addFav(fav) ) )
+}
