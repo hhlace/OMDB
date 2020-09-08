@@ -60,9 +60,9 @@ router.post("/addFav", (req,res) => {
     })
     .then(fav => {
         fav.setUser(req.body.userId)
-        return fav;
+        return fav.dataValues.favourite_movies;
     })
-    .then(fav => res.status(201).send(fav))
+    .then(favId => res.status(201).send(favId))
 })
 
 router.get(":user/getFavs", (req, res) =>{

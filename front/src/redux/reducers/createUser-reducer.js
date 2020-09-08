@@ -9,10 +9,10 @@ export default (state = initialState, action) => {
         case LOGIN_USER:
             return { ...state, loggedUser: action.loggedUser};
         case ADD_FAV:
-            let updatedUser = state.loggedUser;
-            updatedUser.favs = updatedUser.favs, action.favId;
-            console.log('reducer', updatedUser)
-            return {...state, loggedUser: updatedUser }
+            let favs = state.loggedUser.favs
+            let updated = state.loggedUser;
+            updated.favs = [...favs, action.favId]
+            return {...state, loggedUser: updated }
         default:
             return state;
     }

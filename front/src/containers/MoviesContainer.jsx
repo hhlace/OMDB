@@ -12,13 +12,11 @@ class MoviesContainer extends Component {
     }
 
     handleAddFav(movieId){
-        console.log('agregando a fav', movieId)
         const favObj ={
             userId: this.props.userId,
             fav: movieId
         }
-        console.log(favObj);
-        addToFav(favObj);
+        this.props.addToFav(favObj);
     }
 
     render() {
@@ -35,7 +33,7 @@ const mapStateToProps = (state) => {
         favs: state.user.loggedUser.favs
     }
 }
-const mapDispatchToProps = () => {
+const mapDispatchToProps = (dispatch) => {
     return {
         fetchMovie: (titulo) => ( dispatch(fetchMovie(titulo))),
         addToFav: (movieId) => ( dispatch( addToFav(movieId)))

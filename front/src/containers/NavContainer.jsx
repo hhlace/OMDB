@@ -53,7 +53,7 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state, ownProps) => {
     return {
         history: ownProps.history,
-        loggedUser: state.user.loggedUser.username
+        loggedUser: state.user.loggedUser.userName
     }
 }
 
