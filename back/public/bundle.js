@@ -37714,6 +37714,35 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/icons/AssignmentInd.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@material-ui/icons/AssignmentInd.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
+  d: "M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm0 4c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V19z"
+}), 'AssignmentInd');
+
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/icons/Check.js":
 /*!**************************************************!*\
   !*** ./node_modules/@material-ui/icons/Check.js ***!
@@ -38028,35 +38057,6 @@ var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/crea
 var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
   d: "M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
 }), 'MoreVert');
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@material-ui/icons/Notifications.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/@material-ui/icons/Notifications.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
-
-var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
-  d: "M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
-}), 'Notifications');
 
 exports.default = _default;
 
@@ -90379,11 +90379,16 @@ function MediaCard(_ref) {
   var movie = _ref.movie,
       isFav = _ref.isFav,
       userId = _ref.userId,
-      addFav = _ref.addFav;
+      addFav = _ref.addFav,
+      rmFav = _ref.rmFav;
   var classes = useStyles();
 
   var addToFav = function addToFav() {
     addFav(movie.imdbID);
+  };
+
+  var removeFromFav = function removeFromFav() {
+    rmFav(movie.imdbID);
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -90409,7 +90414,9 @@ function MediaCard(_ref) {
   }, "Year: ", movie.Year))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_10__["default"], {
     color: "secondary",
     "aria-label": "add to favourites"
-  }, isFav ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Favorite__WEBPACK_IMPORTED_MODULE_8___default.a, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_FavoriteBorder__WEBPACK_IMPORTED_MODULE_7___default.a, {
+  }, isFav ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Favorite__WEBPACK_IMPORTED_MODULE_8___default.a, {
+    onClick: removeFromFav
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_FavoriteBorder__WEBPACK_IMPORTED_MODULE_7___default.a, {
     onClick: addToFav
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_9__["default"], {
     size: "small",
@@ -90440,7 +90447,8 @@ __webpack_require__.r(__webpack_exports__);
   var movies = _ref.movies,
       favs = _ref.favs,
       userId = _ref.userId,
-      addFav = _ref.addFav;
+      addFav = _ref.addFav,
+      rmFav = _ref.rmFav;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -90454,7 +90462,8 @@ __webpack_require__.r(__webpack_exports__);
       movie: movie,
       isFav: isFav,
       userId: userId,
-      addFav: addFav
+      addFav: addFav,
+      rmFav: rmFav
     }));
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
 });
@@ -90883,8 +90892,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _material_ui_icons_Mail__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/icons/Mail */ "./node_modules/@material-ui/icons/Mail.js");
 /* harmony import */ var _material_ui_icons_Mail__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Mail__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _material_ui_icons_Notifications__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/icons/Notifications */ "./node_modules/@material-ui/icons/Notifications.js");
-/* harmony import */ var _material_ui_icons_Notifications__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Notifications__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _material_ui_icons_AssignmentInd__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/icons/AssignmentInd */ "./node_modules/@material-ui/icons/AssignmentInd.js");
+/* harmony import */ var _material_ui_icons_AssignmentInd__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AssignmentInd__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var _material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material-ui/icons/MoreVert */ "./node_modules/@material-ui/icons/MoreVert.js");
 /* harmony import */ var _material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @material-ui/icons/Home */ "./node_modules/@material-ui/icons/Home.js");
@@ -91070,19 +91079,17 @@ function PrimarySearchAppBar(_ref) {
     },
     open: isMobileMenuOpen,
     onClose: handleMobileMenuClose
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    "aria-label": "show 4 new mails",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    component: react_router_dom__WEBPACK_IMPORTED_MODULE_17__["Link"],
+    to: "/login"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
     color: "inherit"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Badge__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    badgeContent: 4,
-    color: "secondary"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Mail__WEBPACK_IMPORTED_MODULE_13___default.a, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Messages")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    "aria-label": "show 11 new notifications",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_12___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Login")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    component: react_router_dom__WEBPACK_IMPORTED_MODULE_17__["Link"],
+    to: "/register"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
     color: "inherit"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Badge__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    badgeContent: 11,
-    color: "secondary"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Notifications__WEBPACK_IMPORTED_MODULE_14___default.a, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Notifications")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_AssignmentInd__WEBPACK_IMPORTED_MODULE_14___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Register")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_8__["default"], {
     onClick: handleProfileMenuOpen
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
     "aria-label": "account of current user",
@@ -91664,6 +91671,7 @@ var MoviesContainer = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
     _this.handleAddFav = _this.handleAddFav.bind(_assertThisInitialized(_this));
+    _this.handleRemoveFav = _this.handleRemoveFav.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -91677,13 +91685,24 @@ var MoviesContainer = /*#__PURE__*/function (_Component) {
       this.props.addToFav(favObj);
     }
   }, {
+    key: "handleRemoveFav",
+    value: function handleRemoveFav(movieId) {
+      console.log('aca el user es -->', this.props.userId);
+      var rmFavObj = {
+        userId: this.props.userId,
+        fav: movieId
+      };
+      this.props.deleteFromFav(rmFavObj);
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Movies__WEBPACK_IMPORTED_MODULE_3__["default"], {
         movies: this.props.movies,
         favs: this.props.favs,
         userId: this.props.userId,
-        addFav: this.handleAddFav
+        addFav: this.handleAddFav,
+        rmFav: this.handleRemoveFav
       });
     }
   }]);
@@ -91716,6 +91735,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     }),
     addToFav: function addToFav(movieId) {
       return dispatch(Object(_redux_action_creator_createUsers__WEBPACK_IMPORTED_MODULE_4__["addToFav"])(movieId));
+    },
+    deleteFromFav: function deleteFromFav(movieId) {
+      return dispatch(Object(_redux_action_creator_createUsers__WEBPACK_IMPORTED_MODULE_4__["deleteFromFav"])(movieId));
     }
   };
 };
@@ -92041,7 +92063,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*!***********************************************!*\
   !*** ./src/redux/action-creator/constants.js ***!
   \***********************************************/
-/*! exports provided: RECEIVE_MOVIES, RECEIVE_MOVIE, CREATE_USER, LOGIN_USER, USER_LOGOUT, ADD_FAV */
+/*! exports provided: RECEIVE_MOVIES, RECEIVE_MOVIE, CREATE_USER, LOGIN_USER, USER_LOGOUT, ADD_FAV, DELETE_FAV */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92052,12 +92074,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGIN_USER", function() { return LOGIN_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "USER_LOGOUT", function() { return USER_LOGOUT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_FAV", function() { return ADD_FAV; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DELETE_FAV", function() { return DELETE_FAV; });
 var RECEIVE_MOVIES = 'RECEIVE_MOVIES';
 var RECEIVE_MOVIE = 'RECEIVE_MOVIE';
 var CREATE_USER = 'CREATE_USER';
 var LOGIN_USER = 'LOGIN_USER';
 var USER_LOGOUT = 'USER_LOGOUT';
 var ADD_FAV = 'ADD_FAV';
+var DELETE_FAV = 'DELETE_FAV';
 
 /***/ }),
 
@@ -92065,7 +92089,7 @@ var ADD_FAV = 'ADD_FAV';
 /*!*************************************************!*\
   !*** ./src/redux/action-creator/createUsers.js ***!
   \*************************************************/
-/*! exports provided: userCreate, loginUser, logout, addToFav */
+/*! exports provided: userCreate, loginUser, logout, addToFav, deleteFromFav */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92074,6 +92098,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginUser", function() { return loginUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToFav", function() { return addToFav; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteFromFav", function() { return deleteFromFav; });
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./src/redux/action-creator/constants.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
@@ -92090,6 +92115,13 @@ var login = function login(loggedUser) {
 var addFav = function addFav(favId) {
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_0__["ADD_FAV"],
+    favId: favId
+  };
+};
+
+var deleteFav = function deleteFav(favId) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_0__["DELETE_FAV"],
     favId: favId
   };
 };
@@ -92121,6 +92153,19 @@ var addToFav = function addToFav(toFav) {
       return res.data;
     }).then(function (fav) {
       return dispatch(addFav(fav));
+    });
+  };
+};
+var deleteFromFav = function deleteFromFav(ids) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]('/addFav', {
+      data: {
+        ids: ids
+      }
+    }).then(function (res) {
+      return res.data;
+    }).then(function (favId) {
+      return dispatch(deleteFav(favId));
     });
   };
 };
@@ -92227,6 +92272,16 @@ var initialState = {
       updated.favs = [].concat(_toConsumableArray(favs), [action.favId]);
       return _objectSpread(_objectSpread({}, state), {}, {
         loggedUser: updated
+      });
+
+    case _action_creator_constants__WEBPACK_IMPORTED_MODULE_0__["DELETE_FAV"]:
+      var newFavs = state.loggedUser.favs.filter(function (fav) {
+        return action.favId !== fav;
+      });
+      var updatedF = state.loggedUser;
+      updatedF.favs = newFavs;
+      return _objectSpread(_objectSpread({}, state), {}, {
+        loggedUser: updatedF
       });
 
     default:

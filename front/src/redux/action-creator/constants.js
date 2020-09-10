@@ -4,3 +4,4 @@ export const CREATE_USER = 'CREATE_USER';
 export const LOGIN_USER = 'LOGIN_USER';
 export const USER_LOGOUT = 'USER_LOGOUT';
 export const ADD_FAV = 'ADD_FAV';
+export const DELETE_FAV = 'DELETE_FAV';

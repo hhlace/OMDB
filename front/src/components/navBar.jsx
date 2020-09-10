@@ -12,7 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import HomeIcon from '@material-ui/icons/Home';
 import { Link } from "react-router-dom";
@@ -142,21 +142,17 @@ export default function PrimarySearchAppBar({ handleChange, value, handleSubmit,
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
+      <MenuItem component={Link} to='/login'>
+        <IconButton  color="inherit">
+            <AccountCircle />
         </IconButton>
-        <p>Messages</p>
+        <p>Login</p>
       </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
+      <MenuItem component={Link} to='/register'>
+        <IconButton color="inherit" >
+            <AssignmentIndIcon />
         </IconButton>
-        <p>Notifications</p>
+        <p>Register</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton

@@ -2,7 +2,7 @@ import React from 'react';
 import MovieCard from './MovieCard';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-export default ({movies, favs, userId, addFav}) => {
+export default ({movies, favs, userId, addFav, rmFav}) => {
   
   return (
     <div className='container'>
@@ -13,7 +13,7 @@ export default ({movies, favs, userId, addFav}) => {
             const isFav = favs.includes(movie.imdbID);
             return (
             <div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2' key={movie.imdbID}>
-              <MovieCard movie={movie} isFav={isFav} userId={userId} addFav={addFav}/>
+              <MovieCard movie={movie} isFav={isFav} userId={userId} addFav={addFav} rmFav={rmFav}/>
             </div>
             
           )})) :(<CircularProgress />)

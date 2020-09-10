@@ -1,4 +1,4 @@
-import {  LOGIN_USER, ADD_FAV } from './constants';
+import {  LOGIN_USER, ADD_FAV, DELETE_FAV } from './constants';
 import axios from 'axios';
 
 const login = loggedUser => {
@@ -11,6 +11,13 @@ const login = loggedUser => {
 const addFav = favId => {
     return {
         type: ADD_FAV,
+        favId
+    }
+}
+
+const deleteFav = favId => {
+    return {
+        type: DELETE_FAV,
         favId
     }
 }
@@ -39,3 +46,9 @@ export const addToFav = (toFav) => dispatch => {
     .then( res => res.data )
     .then( fav => dispatch( addFav(fav) ) )
 }
+
+export const deleteFromFav = (ids) => dispatch => {
+    return axios.delete('/addFav', {data: {ids} })
+    .then( res => res.data )
+    .then( favId => dispatch( deleteFav(favId) ) )
+} 

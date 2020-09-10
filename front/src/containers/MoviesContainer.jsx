@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import store from '../redux/store';
 import { connect } from 'react-redux';
 import Movies from '../components/Movies';
-import { addToFav } from '../redux/action-creator/createUsers';
+import { addToFav, deleteFromFav } from '../redux/action-creator/createUsers';
 
 
 class MoviesContainer extends Component {
     constructor(props) {
         super(props)
         this.handleAddFav = this.handleAddFav.bind(this);
+        this.handleRemoveFav = this.handleRemoveFav.bind(this);
     }
 
     handleAddFav(movieId){
@@ -19,9 +20,18 @@ class MoviesContainer extends Component {
         this.props.addToFav(favObj);
     }
 
+    handleRemoveFav(movieId){
+        console.log('aca el user es -->', this.props.userId)
+        const rmFavObj ={
+            userId: this.props.userId,
+            fav: movieId
+        }
+        this.props.deleteFromFav(rmFavObj);
+    }
+
     render() {
         return(
-            <Movies movies={this.props.movies} favs={this.props.favs} userId={this.props.userId} addFav={this.handleAddFav}/>
+            <Movies movies={this.props.movies} favs={this.props.favs} userId={this.props.userId} addFav={this.handleAddFav} rmFav={this.handleRemoveFav}/>
         );
     }
 }
@@ -36,7 +46,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchMovie: (titulo) => ( dispatch(fetchMovie(titulo))),
-        addToFav: (movieId) => ( dispatch( addToFav(movieId)))
+        addToFav: (movieId) => ( dispatch( addToFav(movieId))),
+        deleteFromFav: (movieId) => ( dispatch( deleteFromFav(movieId)))
     }
 }
 

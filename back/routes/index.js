@@ -4,6 +4,8 @@ const User = require("../models/user");
 const Favs = require("../models/favs");
 const passport = require("passport");
 const { sequelize } = require("../models/User");
+const S = require('sequelize');
+const Op = S.Op;
 
 router.post("/register", (req, res) => {
     User.create({
@@ -63,6 +65,17 @@ router.post("/addFav", (req,res) => {
         return fav.dataValues.favourite_movies;
     })
     .then(favId => res.status(201).send(favId))
+})
+
+router.delete("/addFav", (req, res) => {
+    Favs.findOne({
+        where: {
+            favourite_movies: req.body.fav,
+            [Op.and]: {userId: req.body.userId}
+        }
+    })
+    .then( fav => fav.destroy() )
+    .then( () => res.status(200).send(req.body.fav) )
 })
 
 router.get(":user/getFavs", (req, res) =>{
