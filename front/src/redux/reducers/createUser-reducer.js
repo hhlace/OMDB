@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
         case DELETE_FAV:
             let newFavs = state.loggedUser.favs.filter( fav => action.favId !== fav);
             let updatedF = state.loggedUser;
-            updatedF.favs = newFavs
+            updatedF.favs = newFavs;
             return {...state, loggedUser: updatedF };
         default:
             return state;

@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Button from '@material-ui/core/Button';
+import Alert from '@material-ui/lab/Alert';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom";
@@ -29,7 +30,8 @@ const useStyles = makeStyles({
 export default function MediaCard({ movie, isFav, userId, addFav, rmFav }) {
   const classes = useStyles();
   const addToFav = () => {
-    addFav(movie.imdbID)
+    if(userId) return addFav(movie.imdbID)
+    return <Alert severity="warning">This is a warning alert — check it out!</Alert>
   }
 
   const removeFromFav = () => {

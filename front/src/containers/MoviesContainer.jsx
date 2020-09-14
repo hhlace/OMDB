@@ -13,7 +13,7 @@ class MoviesContainer extends Component {
     }
 
     handleAddFav(movieId){
-        const favObj ={
+        const favObj = {
             userId: this.props.userId,
             fav: movieId
         }
@@ -47,7 +47,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         fetchMovie: (titulo) => ( dispatch(fetchMovie(titulo))),
         addToFav: (movieId) => ( dispatch( addToFav(movieId))),
-        deleteFromFav: (movieId) => ( dispatch( deleteFromFav(movieId)))
+        deleteFromFav: (rmFavObj) => ( dispatch( deleteFromFav(rmFavObj)))
     }
 }
 

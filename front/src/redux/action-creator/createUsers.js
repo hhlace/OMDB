@@ -48,7 +48,7 @@ export const addToFav = (toFav) => dispatch => {
 }
 
 export const deleteFromFav = (ids) => dispatch => {
-    return axios.delete('/addFav', {data: {ids} })
+    return axios.delete('/addFav', { data: ids })
     .then( res => res.data )
     .then( favId => dispatch( deleteFav(favId) ) )
 } 
