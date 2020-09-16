@@ -20,7 +20,7 @@ class main extends Component {
     return (
       <div id="main">
         <Route path="/" component={NavContainer} />
-        <div className="col-xs-10">
+        <div className="col-xs-10" id='mainBody'>
           <Switch>
             <Route exact path="/" component={Welcome} />
             <Route exact path="/movies" component={MoviesContainer} />

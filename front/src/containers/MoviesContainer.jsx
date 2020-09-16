@@ -21,7 +21,6 @@ class MoviesContainer extends Component {
     }
 
     handleRemoveFav(movieId){
-        console.log('aca el user es -->', this.props.userId)
         const rmFavObj ={
             userId: this.props.userId,
             fav: movieId

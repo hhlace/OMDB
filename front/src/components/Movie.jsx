@@ -6,7 +6,7 @@ import './styles/movie.scss';
 
 export default ({ movie }) => (
   
-  <Grid container spacing={2}>
+  <Grid container >
   
       {movie.Title ?
       (<>
