@@ -10,6 +10,11 @@ class MoviesContainer extends Component {
         super(props)
         this.handleAddFav = this.handleAddFav.bind(this);
         this.handleRemoveFav = this.handleRemoveFav.bind(this);
+        this.handleToMovie = this.handleToMovie.bind(this);
+    }
+
+    handleToMovie(movieId) {
+        this.props.history.push(`/movies/${movieId}`)
     }
 
     handleAddFav(movieId){
@@ -30,13 +35,14 @@ class MoviesContainer extends Component {
 
     render() {
         return(
-            <Movies movies={this.props.movies} favs={this.props.favs} userId={this.props.userId} addFav={this.handleAddFav} rmFav={this.handleRemoveFav}/>
+            <Movies movies={this.props.movies} favs={this.props.favs} userId={this.props.userId} addFav={this.handleAddFav} rmFav={this.handleRemoveFav} handleToMovie={this.handleToMovie}/>
         );
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
+        history: ownProps.history,
         movies: state.movies.movies,
         userId: state.user.loggedUser.id,
         favs: state.user.loggedUser.favs

@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard({ movie, isFav, userId, addFav, rmFav }) {
+export default function MediaCard({ movie, isFav, userId, addFav, rmFav, handleToMovie }) {
   const classes = useStyles();
   const addToFav = () => {
     if(userId) return addFav(movie.imdbID)
@@ -37,17 +37,19 @@ export default function MediaCard({ movie, isFav, userId, addFav, rmFav }) {
   const removeFromFav = () => {
     rmFav(movie.imdbID)
   }
+  const toMovie = () => {
+    handleToMovie(movie.imdbID) 
+  }
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <Link to={`/movies/${movie.imdbID}`} > 
         <CardMedia
           className={classes.media}
           image={movie.Poster}
           title={movie.Title}
+          onClick={toMovie}
         />
-        </Link>
         <CardContent>
           <Typography gutterBottom variant="p" component="p">
           {movie.Title}
